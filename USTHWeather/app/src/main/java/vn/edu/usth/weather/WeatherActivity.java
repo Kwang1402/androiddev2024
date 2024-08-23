@@ -22,6 +22,13 @@ public class WeatherActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        //Create a new Fragment to be placed in the activity
+        ForecastFragment firstFragment = new ForecastFragment();
+        // Add the fragment to the 'container' FrameLayout
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.fragmentContainerView, firstFragment)
+                .commit();
     }
 
     @Override
@@ -53,4 +60,5 @@ public class WeatherActivity extends AppCompatActivity {
         super.onDestroy();
         Log.i(TAG, "onDestroy: ");
     }
+
 }
