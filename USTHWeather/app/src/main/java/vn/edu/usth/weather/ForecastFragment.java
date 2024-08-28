@@ -1,6 +1,7 @@
 package vn.edu.usth.weather;
 
 import android.graphics.Color;
+import android.media.Image;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,7 +10,10 @@ import android.view.CollapsibleActionView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
+import  android.widget.LinearLayout;
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ForecastFragment#newInstance} factory method to
@@ -61,8 +65,25 @@ public class ForecastFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_forecast, container, false);
-        view.setBackgroundColor(Color.parseColor("#000000"));
+        FrameLayout view = (FrameLayout) inflater.inflate(R.layout.fragment_forecast, container, false);
+        view.setBackgroundColor(Color.parseColor("#20b1f5"));
+
+        LinearLayout linearLayout = new LinearLayout(view.getContext());
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
+
+        TextView textView = new TextView(view.getContext());
+        String text = "Thursday";
+        textView.setText(text);
+        textView.setTextSize(50);
+        textView.setTextColor(Color.WHITE);
+
+        ImageView imageView = new ImageView(view.getContext());
+        imageView.setImageResource(R.drawable.weather_sun_cloud_rain_256);
+
+        view.addView(linearLayout);
+        linearLayout.addView(textView);
+        linearLayout.addView(imageView);
+
         return view;
     }
 }
