@@ -1,12 +1,11 @@
 package vn.edu.usth.weather;
 
 import android.graphics.Color;
-import android.media.Image;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.view.CollapsibleActionView;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,24 +64,23 @@ public class ForecastFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        FrameLayout view = (FrameLayout) inflater.inflate(R.layout.fragment_forecast, container, false);
-        view.setBackgroundColor(Color.parseColor("#20b1f5"));
+        View view = inflater.inflate(R.layout.fragment_forecast, container, false);
 
-        LinearLayout linearLayout = new LinearLayout(view.getContext());
-        linearLayout.setOrientation(LinearLayout.VERTICAL);
-
-        TextView textView = new TextView(view.getContext());
-        String text = "Thursday";
-        textView.setText(text);
-        textView.setTextSize(50);
-        textView.setTextColor(Color.WHITE);
-
-        ImageView imageView = new ImageView(view.getContext());
-        imageView.setImageResource(R.drawable.weather_sun_cloud_rain_256);
-
-        view.addView(linearLayout);
-        linearLayout.addView(textView);
-        linearLayout.addView(imageView);
+//        LinearLayout linearLayout = new LinearLayout(view.getContext());
+//        linearLayout.setOrientation(LinearLayout.HORIZONTAL);
+//        linearLayout.setGravity(Gravity.CENTER);
+//        TextView textView = new TextView(view.getContext());
+//        String text = "Thursday";
+//        textView.setText(text);
+//        textView.setTextSize(50);
+//        textView.setTextColor(Color.WHITE);
+//
+//        ImageView imageView = new ImageView(view.getContext());
+//        imageView.setImageResource(R.drawable.weather_sun_cloud_rain_256);
+//
+//        view.addView(linearLayout);
+//        linearLayout.addView(textView);
+//        linearLayout.addView(imageView);
 
         return view;
     }

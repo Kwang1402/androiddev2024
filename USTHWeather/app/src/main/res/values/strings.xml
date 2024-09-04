@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">USTH Weather</string>
-    <string name="hello_world">Hello World</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mon">Mon</string>
+    <string name="image_sun_cloud_rain">image_sun_cloud_rain</string>
+    <string name="tue">Tue</string>
+    <string name="partly_rainy">Partly Rainy \n24C - 31C</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
 </resources>
