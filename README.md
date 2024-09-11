@@ -12,5 +12,5 @@ Student Info
 
 * Name: *Vo Hong Quang*
 * ID: *22BI13386*
-* Group ID: *Your Group ID here*
-* Project Name: *Your Project Name here*
+* Group ID: *1*
+* Project Name: *GrabFood-like Client*
