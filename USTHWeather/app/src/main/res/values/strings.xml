@@ -10,4 +10,9 @@
     <string name="fri">Fri</string>
     <string name="sat">Sat</string>
     <string name="sun">Sun</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cloudy_32c">32C \nCloudy</string>
+    <string name="image_clouds">image_clouds</string>
+    <string name="paris">Paris</string>
 </resources>
