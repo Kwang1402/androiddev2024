@@ -10,6 +10,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.tabs.TabLayout;
+
 import vn.edu.usth.weather.adapter.WeatherPagerAdapter;
 
 public class WeatherActivity extends AppCompatActivity {
@@ -21,12 +23,13 @@ public class WeatherActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_weather);
 
-        // Initialize the ViewPager
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
         ViewPager viewPager = findViewById(R.id.weather_view_pager);
 
-        // Set the adapter
         WeatherPagerAdapter adapter = new WeatherPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
+
+        tabLayout.setupWithViewPager(viewPager);
 
 //        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
 //            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
