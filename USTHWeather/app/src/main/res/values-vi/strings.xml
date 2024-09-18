@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">USTH Thời tiết</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="mon">Thứ 2</string>
+    <string name="image_sun_cloud_rain">image_sun_cloud_rain</string>
+    <string name="tue">Thứ 3</string>
+    <string name="partly_rainy">Mưa Nhỏ\n24C - 31C</string>
+    <string name="wed">Thứ 4</string>
+    <string name="thu">Thứ 5</string>
+    <string name="fri">Thứ 6</string>
+    <string name="sat">Thứ 7</string>
+    <string name="sun">CN</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cloudy_32c">32C\nNhiều Mây </string>
+    <string name="image_clouds">image_clouds</string>
+    <string name="paris">Paris</string>
+</resources>

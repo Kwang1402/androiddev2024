@@ -24,7 +24,7 @@
             android:paddingTop="10dp"
             android:text="@string/mon"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -42,7 +42,7 @@
             android:paddingTop="5dp"
             android:text="@string/partly_rainy"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 
@@ -60,7 +60,7 @@
             android:paddingTop="10dp"
             android:text="@string/tue"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -78,7 +78,7 @@
             android:paddingTop="5dp"
             android:text="@string/partly_rainy"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 
@@ -96,7 +96,7 @@
             android:paddingTop="10dp"
             android:text="@string/wed"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -114,7 +114,7 @@
             android:paddingTop="5dp"
             android:text="@string/partly_rainy"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 
@@ -132,7 +132,7 @@
             android:paddingTop="10dp"
             android:text="@string/thu"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -150,7 +150,7 @@
             android:paddingTop="5dp"
             android:text="@string/partly_rainy"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 
@@ -168,7 +168,7 @@
             android:paddingTop="10dp"
             android:text="@string/fri"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -186,7 +186,7 @@
             android:paddingTop="5dp"
             android:text="@string/partly_rainy"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 
@@ -204,7 +204,7 @@
             android:paddingTop="10dp"
             android:text="@string/sat"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -222,7 +222,7 @@
             android:paddingTop="5dp"
             android:text="@string/partly_rainy"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 
@@ -240,7 +240,7 @@
             android:paddingTop="10dp"
             android:text="@string/sun"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -258,7 +258,7 @@
             android:paddingTop="5dp"
             android:text="@string/partly_rainy"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 
@@ -276,7 +276,7 @@
             android:paddingTop="10dp"
             android:text="@string/mon"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -294,7 +294,7 @@
             android:paddingTop="5dp"
             android:text="@string/partly_rainy"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 
@@ -312,7 +312,7 @@
             android:paddingTop="10dp"
             android:text="@string/tue"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -330,7 +330,7 @@
             android:paddingTop="5dp"
             android:text="@string/partly_rainy"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 
@@ -348,7 +348,7 @@
             android:paddingTop="10dp"
             android:text="@string/wed"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -366,7 +366,7 @@
             android:paddingTop="5dp"
             android:text="@string/partly_rainy"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 
@@ -384,7 +384,7 @@
             android:paddingTop="10dp"
             android:text="@string/thu"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -402,7 +402,7 @@
             android:paddingTop="5dp"
             android:text="@string/partly_rainy"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 
@@ -420,7 +420,7 @@
             android:paddingTop="10dp"
             android:text="@string/fri"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -438,7 +438,7 @@
             android:paddingTop="5dp"
             android:text="@string/partly_rainy"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 
@@ -456,7 +456,7 @@
             android:paddingTop="10dp"
             android:text="@string/sat"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -474,7 +474,7 @@
             android:paddingTop="5dp"
             android:text="@string/partly_rainy"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 
@@ -492,7 +492,7 @@
             android:paddingTop="10dp"
             android:text="@string/sun"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -510,7 +510,7 @@
             android:paddingTop="5dp"
             android:text="@string/partly_rainy"
             android:textColor="@color/light_gray"
-            android:textSize="18sp"
+            android:textSize="@dimen/content_size"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 </LinearLayout>

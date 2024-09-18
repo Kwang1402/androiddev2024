@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:textSize="18sp"
+        android:textSize="@dimen/content_size"
         android:textColor="@color/light_gray"
         android:text="@string/cloudy_32c"/>
 
@@ -25,7 +25,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="@dimen/content_size"
         android:textColor="@color/light_gray"
         android:layout_alignParentRight="true"
         android:text="@string/paris"/>
