@@ -1,5 +1,6 @@
 package vn.edu.usth.weather;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -16,7 +17,8 @@ import vn.edu.usth.weather.adapter.WeatherPagerAdapter;
 
 public class WeatherActivity extends AppCompatActivity {
     static final String TAG = "Weather";
-    
+
+    private MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +33,8 @@ public class WeatherActivity extends AppCompatActivity {
 
         tabLayout.setupWithViewPager(viewPager);
 
+        mediaPlayer = MediaPlayer.create(this, R.raw.vtv_forecast);
+        mediaPlayer.start();
 //        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
 //            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
 //            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
