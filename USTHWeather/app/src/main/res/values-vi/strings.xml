@@ -10,6 +10,8 @@
     <string name="fri">Thứ 6</string>
     <string name="sat">Thứ 7</string>
     <string name="sun">CN</string>
+    <string name="refresh">Làm mới</string>
+    <string name="settings">Cài đặt</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="cloudy_32c">32C\nNhiều Mây </string>

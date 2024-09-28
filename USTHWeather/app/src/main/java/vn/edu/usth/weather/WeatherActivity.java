@@ -1,8 +1,12 @@
 package vn.edu.usth.weather;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,6 +47,28 @@ public class WeatherActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_weather, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int itemId = item.getItemId();
+        if(itemId == R.id.action_refresh) {
+            Toast.makeText(this, getString(R.string.refresh), Toast.LENGTH_LONG).show();
+            return true;
+        }
+        if(itemId == R.id.action_settings) {
+            Intent intent = new Intent(this, PrefActivity.class);
+            startActivity(intent);
+        }
+        super.onOptionsItemSelected(item);
+        return true;
+    }
+
 
     @Override
     protected void onStart() {
