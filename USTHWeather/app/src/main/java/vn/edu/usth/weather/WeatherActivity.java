@@ -2,6 +2,7 @@ package vn.edu.usth.weather;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -21,6 +23,12 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import vn.edu.usth.weather.adapter.WeatherPagerAdapter;
 
@@ -78,27 +86,58 @@ public class WeatherActivity extends AppCompatActivity {
 //            }
 //        });
 //        t.start();
-        AsyncTask<String, Integer, String> task = new AsyncTask<String, Integer, String>() {
+        AsyncTask<String, Integer, Bitmap> task = new AsyncTask<String, Integer, Bitmap>() {
             @Override
-            protected String doInBackground(String... strings) {
+            protected Bitmap doInBackground(String... strings) {
                 // This is where the worker thread's code is executed
                 // params are passed from the execute() method call
+
+                // initialize URL
+                URL url = null;
+                Bitmap bitmap = null;
+
                 try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
+                    url = new URL(strings[0]);
+                } catch (MalformedURLException e) {
                     e.printStackTrace();
+                    return null; // Handle the error appropriately
                 }
-                return "Loaded";
+                Log.i("USTHWeather", "The url is: " + url);
+                // Make a request to server
+                if (url != null) {
+                    HttpURLConnection connection = null;
+                    try {
+                        connection = (HttpURLConnection) url.openConnection();
+                        connection.setRequestMethod("GET");
+                        connection.setDoInput(true);
+                        // allow reading response code and response dataconnection.
+                        connection.connect();
+
+                        // Receive response
+                        int response = connection.getResponseCode();
+                        Log.i("USTHWeather", "The response is: " + response);
+                        InputStream is = connection.getInputStream();
+
+                        // Process image response
+                        bitmap = BitmapFactory.decodeStream(is);
+                        connection.disconnect();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                        return null;
+                    }
+                }
+
+                return bitmap;
             }
             @Override
-            protected void onPostExecute(String string) {
+            protected void onPostExecute(Bitmap bitmap) {
                 // This method is called in the main thread. After #doInBackground returns
                 // the bitmap data, we simply set it to an ImageView using ImageView.setImageBitmap()
-                String content = doInBackground();
-                Toast.makeText(getApplicationContext(), content, Toast.LENGTH_SHORT).show();
+                ImageView logo = (ImageView) findViewById(R.id.logo);
+                logo.setImageBitmap(bitmap);
             }
         };
-        task.execute();
+        task.execute("https://usth.edu.vn/wp-content/uploads/2022/08/logo-165.jpg");
     }
 
     @Override
