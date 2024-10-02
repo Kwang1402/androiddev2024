@@ -57,15 +57,17 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
-        if(itemId == R.id.action_refresh) {
-            Toast.makeText(this, getString(R.string.refresh), Toast.LENGTH_LONG).show();
-            return true;
+        switch (itemId) {
+            case R.id.action_refresh:
+                Toast.makeText(this, getString(R.string.refresh), Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.action_settings:
+                Intent intent = new Intent(this, PrefActivity.class);
+                startActivity(intent);
+                return  true;
+            default:
+                super.onOptionsItemSelected(item);
         }
-        if(itemId == R.id.action_settings) {
-            Intent intent = new Intent(this, PrefActivity.class);
-            startActivity(intent);
-        }
-        super.onOptionsItemSelected(item);
         return true;
     }
 
