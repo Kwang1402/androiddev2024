@@ -1,7 +1,9 @@
 package vn.edu.usth.weather;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -55,27 +57,48 @@ public class WeatherActivity extends AppCompatActivity {
 //            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
 //            return insets;
 //        });
-        Thread t = new Thread(new Runnable() {
+//        Thread t = new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                // this method is run in a worker thread
+//                try {
+//                    // wait for 5 seconds to simulate a long network access
+//                    Thread.sleep(5000);
+//                }
+//                catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//                // Assume that we got our data from server
+//                Bundle bundle = new Bundle();
+//                bundle.putString("server_response", "some sample json here");
+//                // notify main thread
+//                Message msg = new Message();
+//                msg.setData(bundle);
+//                handler.sendMessage(msg);
+//            }
+//        });
+//        t.start();
+        AsyncTask<String, Integer, String> task = new AsyncTask<String, Integer, String>() {
             @Override
-            public void run() {
-                // this method is run in a worker thread
+            protected String doInBackground(String... strings) {
+                // This is where the worker thread's code is executed
+                // params are passed from the execute() method call
                 try {
-                    // wait for 5 seconds to simulate a long network access
                     Thread.sleep(5000);
-                }
-                catch (InterruptedException e) {
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                // Assume that we got our data from server
-                Bundle bundle = new Bundle();
-                bundle.putString("server_response", "some sample json here");
-                // notify main thread
-                Message msg = new Message();
-                msg.setData(bundle);
-                handler.sendMessage(msg);
+                return "Loaded";
             }
-        });
-        t.start();
+            @Override
+            protected void onPostExecute(String string) {
+                // This method is called in the main thread. After #doInBackground returns
+                // the bitmap data, we simply set it to an ImageView using ImageView.setImageBitmap()
+                String content = doInBackground();
+                Toast.makeText(getApplicationContext(), content, Toast.LENGTH_SHORT).show();
+            }
+        };
+        task.execute();
     }
 
     @Override
